@@ -1,0 +1,36 @@
+
+ion-content {
+    --background: #d4d1d1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    form {
+      max-width: 400px;
+      width: 100%;
+      padding: 50px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+ margin-left:500px;
+ margin-top: 100px;
+      ion-item {
+        margin-bottom: 16px;
+      }
+  
+      ion-button[type="submit"] {
+        --background: #3880ff;
+        --border-radius: 24px;
+      }
+    }
+  }
+  .forgot-password {
+    display: flex;
+
+    margin-bottom: 16px;}
+    ion-label{
+    padding-left: 18px;
+    
+      font-weight: 100;
+    }

@@ -1,0 +1,35 @@
+// table {
+//     border-collapse: collapse;
+//   }
+  
+//   ion-col, ion-row {
+//     border: 1px solid black;
+//   }
+// .table-header,
+// .table-cell {
+// border: 1px solid black;
+// text-align: center;
+// padding: 10px;
+// }
+.my-table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .my-table td, .my-table th {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+
+  }
+  
+  .my-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+   max-width:2%;
+  }
+//   ion-grid {
+//     --ion-grid-column-padding: 10px;
+//   }
+  
+  

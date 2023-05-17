@@ -1,0 +1,94 @@
+<ion-buttons slot="start">
+  <ion-menu-button></ion-menu-button>
+</ion-buttons>
+<div>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-xs="12" size-sm="12" size-md="4" size-lg="4">
+        <ion-select
+          label="Status"
+          label-placement="floating"
+          fill="outline"
+          [(ngModel)]="selectedStatus"
+        >
+          <ion-select-option *ngFor="let user of users" [value]="user.status"
+            >{{user.status}}</ion-select-option
+          >
+        </ion-select>
+      </ion-col>
+      <ion-col size-xs="12" size-sm="12" size-md="4" size-lg="4">
+        <ion-select
+          label="Company"
+          label-placement="floating"
+          fill="outline"
+          [(ngModel)]="selectedCompany"
+        >
+          <ion-select-option *ngFor="let user of users" [value]="user.company"
+            >{{user.company}}</ion-select-option
+          >
+        </ion-select>
+      </ion-col>
+      <ion-col size-xs="12" size-sm="12" size-md="4" size-lg="4">
+        <ion-select
+          label="Station"
+          label-placement="floating"
+          fill="outline"
+          [(ngModel)]="selectedStation"
+        >
+          <ion-select-option *ngFor="let user of users" [value]="user.station"
+            >{{user.station}}</ion-select-option
+          >
+        </ion-select>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-col size-xs=""
+    ><ion-searchbar
+      [(ngModel)]="searchQuery"
+      placeholder="Search"
+    ></ion-searchbar
+  ></ion-col>
+</div>
+
+<ion-content class="ion-padding">
+  <!-- <ion-list>
+    <ion-item *ngFor="let user of users">
+      <ion-label> {{user.username}} </ion-label>
+    </ion-item>
+  </ion-list> -->
+  <table class="my-table table table-striped">
+    <thead>
+      <tr>
+        <th>UserId</th>
+        <th>username</th>
+        <!-- <mfDefaultSorter by="username">Username</mfDefaultSorter> -->
+        <th>Email</th>
+        <th>Company</th>
+        <th>Station</th>
+        <th>Role</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{user.userId}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.company}}</td>
+        <td>{{user.station}}</td>
+        <td>{{user.role}}</td>
+        <td>{{user.status}}</td>
+      </tr>
+    </tbody>
+    <!-- <tfoot>
+      <tr>
+        <td colspan="5">
+          <mfBootstrapPaginator
+            [rowsOnPageSet]="[5,10,25]"
+          ></mfBootstrapPaginator>
+        </td>
+      </tr>
+    </tfoot> -->
+  </table>
+</ion-content>
